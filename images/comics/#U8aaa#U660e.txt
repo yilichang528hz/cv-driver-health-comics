@@ -1,0 +1,16 @@
+已製作完成，zip 內包含：
+
+1. `png_to_jpg.py`
+2. `run_png_to_jpg.bat`
+
+下載： [png_to_jpg_auto_runner.zip](sandbox:/mnt/data/png_to_jpg_auto_runner.zip)
+
+使用方式：
+
+1. 解壓縮 zip。
+2. 雙擊 `run_png_to_jpg.bat`。
+3. 輸入 PNG 圖片所在資料夾路徑。
+4. 程式會自動將該資料夾內所有 PNG 轉成 JPG。
+5. 檔名主體保持不變，原 PNG 不會刪除。
+
+也可以把資料夾直接拖曳到 `run_png_to_jpg.bat` 上執行。
