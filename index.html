@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Commercial Vehicle Driver Health and Safety Comics. A trilingual static ebook gallery for GitHub Pages.">
+  <title>商用車駕駛健康安全漫畫｜三語電子書藝廊</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="A">
+  <div class="app-shell" id="appShell">
+    <header class="top-banner" id="topBanner">
+      <div class="brand-row">
+        <div class="brand-copy">
+          <p class="copyright-line" id="copyrightText"></p>
+          <h1 id="siteTitle"></h1>
+          <p id="siteSubtitle"></p>
+        </div>
+        <div class="top-actions" aria-label="language and layout controls">
+          <div class="menu-control" id="languageMenuControl">
+            <button type="button" class="menu-trigger" id="languageMenuBtn" aria-expanded="false" aria-controls="languageMenu"></button>
+            <div class="dropdown-menu" id="languageMenu" hidden>
+              <button type="button" data-lang="zh">中文</button>
+              <button type="button" data-lang="en">English</button>
+              <button type="button" data-lang="ja">日本語</button>
+            </div>
+          </div>
+          <div class="menu-control" id="themeMenuControl">
+            <button type="button" class="menu-trigger" id="themeMenuBtn" aria-expanded="false" aria-controls="themeMenu"></button>
+            <div class="dropdown-menu compact" id="themeMenu" hidden>
+              <button type="button" data-theme-option="A">A</button>
+              <button type="button" data-theme-option="B">B</button>
+              <button type="button" data-theme-option="C">C</button>
+              <button type="button" data-theme-option="D">D</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="topic-nav" id="topicNav" aria-label="ebook gallery navigation">
+        <button type="button" id="motivationNavBtn" data-nav-type="home" data-nav-id="home"></button>
+        <div class="gallery-menu-control" id="galleryMenuControl">
+          <button type="button" class="gallery-trigger" id="galleryMenuBtn" aria-expanded="false" aria-controls="galleryMenu"></button>
+          <div class="dropdown-menu gallery-menu" id="galleryMenu" hidden></div>
+        </div>
+      </nav>
+      <button type="button" class="chrome-toggle" id="readerChromeToggleBtn" aria-expanded="true" aria-controls="topBanner"></button>
+    </header>
+
+    <main class="reader-shell" id="readerShell" aria-live="polite">
+      <header class="reader-meta">
+        <div>
+          <p class="eyebrow" id="readerEyebrow"></p>
+          <h2 id="readerTitle"></h2>
+          <p id="readerSummary"></p>
+        </div>
+        <div class="badge-row" id="badgeRow" aria-label="data status badges"></div>
+      </header>
+
+      <section class="home-reader-view" id="homeReaderView">
+        <figure class="ebook-frame" id="ebookFrame">
+          <img id="ebookImage" src="" alt="" loading="eager" decoding="async" fetchpriority="high">
+          <div class="image-fallback" id="imageFallback" hidden></div>
+          <figcaption id="ebookCaption"></figcaption>
+        </figure>
+
+        <article class="motivation-card" id="motivationPanel">
+          <div class="motivation-card__header">
+            <h3 id="motivationTitle"></h3>
+            <button type="button" id="motivationToggleBtn" class="soft-button"></button>
+          </div>
+          <p id="motivationText"></p>
+        </article>
+      </section>
+
+      <nav class="reader-controls" aria-label="ebook page controls">
+        <button type="button" id="prevPageBtn"></button>
+        <span id="pageIndicator" aria-live="polite"></span>
+        <button type="button" id="nextPageBtn"></button>
+        <button type="button" id="zoomOutBtn" class="zoom-control"></button>
+        <button type="button" id="zoomResetBtn" class="zoom-control"></button>
+        <button type="button" id="zoomInBtn" class="zoom-control"></button>
+        <button type="button" id="fitWidthBtn" class="zoom-control"></button>
+        <button type="button" id="fullscreenBtn"></button>
+        <button type="button" id="exitFullscreenBtn"></button>
+      </nav>
+    </main>
+
+    <aside class="floating-hub" id="floatingHub" aria-label="floating language and table of contents">
+      <button type="button" class="floating-main" id="floatingToggleBtn" aria-expanded="false"></button>
+      <div class="floating-panel" id="floatingPanel" hidden>
+        <div class="floating-section">
+          <p id="floatingLanguageTitle"></p>
+          <div class="floating-button-grid">
+            <button type="button" data-lang="zh">中文</button>
+            <button type="button" data-lang="en">English</button>
+            <button type="button" data-lang="ja">日本語</button>
+          </div>
+        </div>
+        <div class="floating-section">
+          <p id="floatingCatalogTitle"></p>
+          <div class="floating-list" id="floatingTopicList"></div>
+        </div>
+        <button type="button" class="soft-button wide" id="glossaryOpenBtn"></button>
+      </div>
+    </aside>
+
+    <dialog class="glossary-modal" id="glossaryDialog">
+      <div class="modal-card">
+        <header class="modal-header">
+          <div>
+            <p class="eyebrow" id="glossaryEyebrow"></p>
+            <h2 id="glossaryTitle"></h2>
+          </div>
+          <button type="button" class="icon-button" id="glossaryCloseBtn" aria-label="Close glossary">×</button>
+        </header>
+        <div class="glossary-grid" id="glossaryGrid"></div>
+      </div>
+    </dialog>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
